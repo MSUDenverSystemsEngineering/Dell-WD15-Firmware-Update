@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 	This script performs the installation or uninstallation of an application(s).
 	# LICENSE #
@@ -63,7 +63,7 @@ Try {
 	## Variables: Application
 	[string]$appVendor = 'Dell'
 	[string]$appName = 'WD15 Docking Station Firemware Update'
-	[string]$appVersion = '1.04'
+	[string]$appVersion = '1.0.4'
 	[string]$appArch = ''
 	[string]$appLang = 'EN'
 	[string]$appRevision = '01'
