@@ -56,6 +56,9 @@ Param (
 Try {
 	## Set the script execution policy for this process
 	Try { Set-ExecutionPolicy -ExecutionPolicy 'ByPass' -Scope 'Process' -Force -ErrorAction 'Stop' } Catch { Write-Error "Failed to set the execution policy to Bypass for this process." }
+	## Suppress PSScriptAnalyzer errors for not using declared variables during Appveyor build
+	[Diagnostics.CodeAnalysis.SuppressMessageAttribute("PSUseDeclaredVarsMoreThanAssignments", "", Justification="Suppresses Appveyor errors on informational variables below")]
+	param()
 
 	##*===============================================
 	##* VARIABLE DECLARATION
